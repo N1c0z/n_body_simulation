@@ -12,8 +12,6 @@
 #include <pthread.h>
 #include "physics.h"
 
-typedef __float128  long_double_t;
-
 #define BodyAmount 4
 #define VectMultiplier 1e-100
 #define HistoryAmount 800
