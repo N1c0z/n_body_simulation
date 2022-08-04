@@ -149,7 +149,7 @@ int main(void)
         speed = speed * IsKeyUp(KEY_I) + 10* (IsKeyDown(KEY_O) && (speed < UINT16_MAX)) -10* (IsKeyDown(KEY_P) && (speed > 0));
         
         for (int p = 0; p < speed; p++){
-        // Calculate accelration or something
+        // Calculate acceleration or something
             newtons_law_of_grav(BodyAmount, &(bodies[0]));
 
 
