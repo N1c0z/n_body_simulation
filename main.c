@@ -1,11 +1,11 @@
 #include "include/raylib.h"
 #include "include/rlgl.h"
-//#include <bits/floatn-common.h>
+#include <bits/floatn-common.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
-//#include <malloc.h>
+#include <malloc.h>
 #include <unistd.h>
 #include <time.h>
 #include <math.h>
