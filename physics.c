@@ -5,26 +5,26 @@ void newtons_law_of_grav(uint8_t bodyAmount, Body *bodies ){
     
     double diffX, diffY, diffZ, c;
     for (int i =0; i < bodyAmount; i++) {
-        bodies[i].accX = 0;
-        bodies[i].accY = 0;
-        bodies[i].accZ = 0;
+        bodies[i].acc.x = 0;
+        bodies[i].acc.y = 0;
+        bodies[i].acc.z = 0;
         for (int k = 0; k < bodyAmount; k++){
             
             if (i == k) {
                 continue;
             }
 
-            diffX = bodies[i].posX - bodies[k].posX;
-            diffY = bodies[i].posY - bodies[k].posY;
-            diffZ = bodies[i].posZ - bodies[k].posZ;
+            diffX = bodies[i].pos.x - bodies[k].pos.x;
+            diffY = bodies[i].pos.y - bodies[k].pos.y;
+            diffZ = bodies[i].pos.z - bodies[k].pos.z;
             
 
             c = -( G * bodies[k].mass ) / pow( sqrt((diffX * diffX) + (diffY * diffY) + (diffZ * diffZ)) ,3 );
             
 
-            bodies[i].accX += c * diffX;
-            bodies[i].accY += c * diffY;
-            bodies[i].accZ += c * diffZ;
+            bodies[i].acc.x += c * diffX;
+            bodies[i].acc.y += c * diffY;
+            bodies[i].acc.z += c * diffZ;
 
         }
     }
