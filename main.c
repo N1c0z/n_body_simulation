@@ -18,12 +18,10 @@
 #define SCALE_FACTOR 1.0f
 #define RADIUS_MULTIPLIER 10
 
-
+void body_init(Body *body, Vec pos, Vec vel, double mass, double radius, Color color);
 void move_player(Camera3D* camera, double curntAngle);
 double current_angle(Vector3 pos, Vector3 tar);
 double current_angle2(Vector3 pos, Vector3 tar);
-
-
 
 int main(void)
 {
@@ -172,7 +170,6 @@ void move_player(Camera3D* camera, double curntAngle){
     camera-> position.y = camera->position.y + (- SCALE_FACTOR * sin(xcurntAngle)) * (IsKeyDown(KEY_W) && !IsKeyDown(KEY_S)) + (+ SCALE_FACTOR * sin(xcurntAngle)) * (!IsKeyDown(KEY_W) && IsKeyDown(KEY_S));
 
     camera->target.y = camera->target.y + ( - SCALE_FACTOR * sin(xcurntAngle)) * (IsKeyDown(KEY_W) && !IsKeyDown(KEY_S)) + (+ SCALE_FACTOR * sin(xcurntAngle)) * (!IsKeyDown(KEY_W) && IsKeyDown(KEY_S));
-
 }
 
 double current_angle2(Vector3 pos, Vector3 tar){
